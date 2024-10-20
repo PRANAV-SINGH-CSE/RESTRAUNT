@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+        body {
+            margin-right: 20px;
+            padding-right: 20px;
+            background-color: black;
+            margin-bottom: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: cursive;
+        }
+
+        /* Navigation Bar */
+        #nav {
+            display: flex;
+            justify-content: space-evenly;
+            /* background: linear-gradient(90deg, #3f5efb, #fc466b); */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 98vw;
+            height: 65px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px); 
+            opacity: 0.91;
+               }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+            padding: 0 20px;
+        }
+
+        a:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        /* Main content */
+        h1 {
+            text-align: center;
+            font-size: 80px;
+            margin-bottom: 5px;
+            text-decoration: underline;
+            color: rgb(249, 249, 5);
+        }
+
+        #center {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            
+            border-radius: 50px;
+            border: 2px solid;
+            height: 500px;
+            width: 400px;
+            box-shadow: 8px 8px 8px rgba(250, 91, 91, 0.5);
+            transition: all 0.5s ease-in-out;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            font-size: x-large;
+            text-decoration: overline;
+            color: #ffffff;
+           
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 10px 10px 55px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        /* Individual cards */
+        #card1 {
+            background-image: url("download.jpg");
+
+            
+        }
+
+        #card2 {
+            background-image: url("pizza.jpg");
+        }
+
+        #card3 {
+            background-image: url("noodles.jpg");
+        }
+
+        #card4 {
+            background-image: url("red pasta.jpg");
+        }
+
+        #card5 {
+            background-image: url("momos.jpg");
+        }
+
+        #card6 {
+            background-image: url("ROLLS.jpg");
+        }
+
+        #card7 {
+            background-image: url("CHILLI POTATO.jpg");
+        }
+
+        #card8 {
+            background-image: url("ICECREAM.jpg");
+        }
+
+        #card9 {
+            background-image: url("CHEESE CAKE.jpg");
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 55px;
+            border-radius: 24px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aquamarine;
+        }
+
+        img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            #center {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 80vw;
+                height: auto;
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            a {
+                font-size: 1.5rem;
+                padding: 0 10px;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .card {
+                width: 90vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            a {
+                font-size: 1.2rem;
+                padding: 0 5px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                width: 100vw;
+            }
+        }
+        /* Fade-out animation when leaving the page */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Fade-in animation when loading the page */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Keyframes for fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fade out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html" class="active"> <img src="pranav.jpg"> </a>
+        <a href="index.html">Home</a>
+        <a href="css.htm">Menu</a>
+        <a href="about.htm">About</a>
+        <a href="contact.htm">Contact</a>
+    </div>
+
+    <h1>MENU</h1>
+    <div id="center">
+        <div id="card1" class="card">BURGER</div>
+        <div id="card2" class="card">PIZZA</div>
+        <div id="card3" class="card">NOODLES</div>
+        <div id="card4" class="card">RED SAUCE PASTA</div>
+        <div id="card5" class="card">MOMOS</div>
+        <div id="card6" class="card">ROLLS</div>
+        <div id="card7" class="card">CHILLI POTATO</div>
+        <div id="card8" class="card">ICECREAM</div>
+        <div id="card9" class="card">CHEESE CAKE</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 All rights reserved by Pranav</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Apply fade-in effect when the page loads
+            document.body.classList.add('fade-in');
+    
+            // Add event listener to all anchor links for the transition
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const href = this.getAttribute('href');
+    
+                    // Apply fade-out effect when a link is clicked
+                    document.body.classList.add('fade-out');
+    
+                    // Wait for the fade-out animation to finish before navigating
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 1000); // 1 second delay (match with animation duration)
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

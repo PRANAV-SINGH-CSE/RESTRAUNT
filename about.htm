@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: cursive;
+            background-color: #1a1a1a; /* Dark background */
+            color: #f0f0f0; /* Light text color */
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-evenly;
+            /* background: linear-gradient(90deg, #3f5efb, #fc466b);  */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 98vw;
+            height: 65px; 
+            border-radius: 15px; 
+            margin-top: 10px;
+        }
+
+        img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        a {
+            color: rgb(238, 255, 0);
+            text-decoration: none;
+            font-size: 2rem; 
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+            padding: 0 20px;
+        }
+
+        a:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.2); 
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        #about {
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 800px; /* Center and limit width */
+            background-color: #2b2b2b; /* Slightly lighter background for the section */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffcc00; /* Accent color for headings */
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-top: 20px;
+            color: #ffcc00; /* Accent color for subheadings */
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        blockquote {
+            background-color: #1a1a1a; /* Match the body background */
+            border-left: 5px solid #ffcc00; /* Accent color for the quote */
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #ccc; /* Light gray for the quote text */
+        }
+
+        footer {
+            border-radius: 24px;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aquamarine;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            a {
+                font-size: 1.5rem;
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            #about {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            a {
+                font-size: 1.2rem;
+                padding: 0 5px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            #nav {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                padding: 10px;
+            }
+
+            #about {
+                padding: 15px;
+                margin: 10px;
+            }
+        }
+        /* Fade-out animation when leaving the page */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Fade-in animation when loading the page */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Keyframes for fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fade out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html" class="active"> <img src="pranav.jpg"> </a>
+        <a href="index.html">Home</a>
+        <a href="css.htm">Menu</a>
+        <a href="about.htm">About</a>
+        <a href="contact.htm">Contact</a>
+    </div>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p> Our passion for FAST FOOD drives us to create unforgettable dining experiences.</p>
+    
+        <h3>Our Mission</h3>
+        <p>Quality, flavor, and sustainability are at the heart of everything we do.</p>
+    
+        <h3>Meet Our Chef</h3>
+        <p>SONALIKA has been passionate about cooking since 2010. With 7 years of experience, she brings a unique flair to every dish.</p>
+        
+        <h3>Testimonials</h3>
+        <blockquote>
+            <p>"Every dish I’ve tried at [Restaurant Name] has been a delight! The flavors are incredible, and the ingredients taste fresh." - PRANAV</p>
+        </blockquote>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 All rights reserved by Pranav</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Apply fade-in effect when the page loads
+            document.body.classList.add('fade-in');
+    
+            // Add event listener to all anchor links for the transition
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const href = this.getAttribute('href');
+    
+                    // Apply fade-out effect when a link is clicked
+                    document.body.classList.add('fade-out');
+    
+                    // Wait for the fade-out animation to finish before navigating
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 1000); // 1 second delay (match with animation duration)
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
